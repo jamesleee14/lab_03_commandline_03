@@ -15,7 +15,7 @@ This lab will review downloading and uncompressing files, and it will get us set
 
 Write the command that you used to do this below:
 ----------
-
+$cd ~
 
 
 ==========
@@ -23,6 +23,16 @@ Write the command that you used to do this below:
 
 Write the command that you used to do this - as well as its output - below :
 ----------
+$ls 
+
+Output:
+'3D Objects'/             Desktop/             JamesMTEC1003/   lab2p              NTUSER.DAT                                                                                     OneDrive/      'Start Menu'@    Templates@
+ ansel/                   Documents/           lab2/            Links/             ntuser.dat.LOG1                                                                                Pictures/       stuff/          Videos/   
+ AppData/                 Downloads/           lab2.gz         'Local Settings'@   ntuser.dat.LOG2                                                                                PrintHood@      stuff.tar
+'Application Data'@       eclipse-workspace/   lab2.tar         mtec1003-lab-02/   NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TM.blf                                        Recent@         stuff2/
+ Contacts/                Favorites/           lab2.tar.gz      Music/             NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000001.regtrans-ms  'Saved Games'/   stuff3/
+ Cookies@                 filename.txt         lab2.txt.gz     'My Documents'@     NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000002.regtrans-ms   Searches/       stuff3.tar.gz
+'Creative Cloud Files'/   hello.txt            lab2.txt.tar     NetHood@           ntuser.ini                                                                                     SendTo@         stuff4/
 
 
 
@@ -31,8 +41,11 @@ Write the command that you used to do this - as well as its output - below :
 
 Write the command(s) that you used to determine this - as well as its output - below:
 ----------
+I don't have any.
+I believe the command is cat so I did $cat mtec1002 but there is nothing.
 
-
+Output:
+cat: mtec1002: No such file or directory
 
 ==========
 4. If there are directories or files in your home directory that have the word mtec1002 in them, list them below (otherwise skip this step):
@@ -65,7 +78,17 @@ This command should have a *flag* to specify the output file.  MAKE SURE TO NAME
 
 Write the command(s) that you used to download this file - as well as its output - below:
 ----------
+$curl -o mtec1003-lab-03.tar.gz. http://foureyes.github.io/mtec1002-spring2014/labs/03/mtec1002-lab-03.tar.gz
+$ls
 
+'3D Objects'/             Documents/           lab2.gz            mtec1003-lab-02/         NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TM.blf                                       'Saved Games'/   stuff3.tar.gz
+ ansel/                   Downloads/           lab2.tar           mtec1003-lab-03.tar.gz   NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000001.regtrans-ms   Searches/       stuff4/
+ AppData/                 eclipse-workspace/   lab2.tar.gz        Music/                   NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000002.regtrans-ms   SendTo@         Templates@
+'Application Data'@       Favorites/           lab2.txt.gz       'My Documents'@           ntuser.ini                                                                                    'Start Menu'@    Videos/
+ Contacts/                filename.txt         lab2.txt.tar       NetHood@                 OneDrive/                                                                                      stuff/
+ Cookies@                 hello.txt            lab2p              NTUSER.DAT               Pictures/                                                                                      stuff.tar
+'Creative Cloud Files'/   JamesMTEC1003/       Links/             ntuser.dat.LOG1          PrintHood@                                                                                     stuff2/
+ Desktop/                 lab2/               'Local Settings'@   ntuser.dat.LOG2          Recent@                                                                                        stuff3/
 
 
 ==========
@@ -73,7 +96,20 @@ Write the command(s) that you used to download this file - as well as its output
 
 Write the command(s) that you used to do this - as well as its output - below:
 ----------
+$tar -xvf mtec1003-lab-03.tar.gz 
 
+I thought that this was to uncompress a tar.gz file but it gives me a different output.
+
+Output:
+tar: This does not look like a tar archive
+
+gzip: stdin: not in gzip format
+tar: Child returned status 1
+tar: Error is not recoverable: exiting now
+
+I also tried doing $tar -xvf mtec1003-lab-03.tar.gz.tar.gz, but it gives me this:
+tar: mtec1003-lab-03.tar.gz.tar.gz: Cannot open: No such file or directory
+tar: Error is not recoverable: exiting now
 
 
 ==========
@@ -88,6 +124,17 @@ Otherwise...
 
 Write the command(s) that you used to do this - as well as its output - below:
 ----------
+I did $cd ~. Then, I did $mkdir mtec1003-lab-03. Then, I did $ls to make sure it was there.
+
+Output:
+'3D Objects'/             Documents/           lab2.gz            mtec1003-lab-02/         ntuser.dat.LOG2                                                                                Recent@         stuff3/
+ ansel/                   Downloads/           lab2.tar           mtec1003-lab-03/         NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TM.blf                                       'Saved Games'/   stuff3.tar.gz
+ AppData/                 eclipse-workspace/   lab2.tar.gz        mtec1003-lab-03.tar.gz   NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000001.regtrans-ms   Searches/       stuff4/
+'Application Data'@       Favorites/           lab2.txt.gz        Music/                   NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000002.regtrans-ms   SendTo@         Templates@
+ Contacts/                filename.txt         lab2.txt.tar      'My Documents'@           ntuser.ini                                                                                    'Start Menu'@    Videos/
+ Cookies@                 hello.txt            lab2p              NetHood@                 OneDrive/                                                                                      stuff/
+'Creative Cloud Files'/   JamesMTEC1003/       Links/             NTUSER.DAT               Pictures/                                                                                      stuff.tar
+ Desktop/                 lab2/               'Local Settings'@   ntuser.dat.LOG1          PrintHood@                                                                                     stuff2/
 
 
 
@@ -96,14 +143,22 @@ Write the command(s) that you used to do this - as well as its output - below:
 
 Write the command(s) that you used to determine this - as well as its output - below:
 ----------
+I did $ cd mtec1003-lab-03 and then did $ls. THere are no directories in here.
 
+James@DESKTOP-07L4K8I MINGW64 ~/mtec1003-lab-03
+$ ls
 
+James@DESKTOP-07L4K8I MINGW64 ~/mtec1003-lab-03
 
 ==========
 10.  Now... go back home.  Then change to the science-fiction directory using a relative path.  The directory is located in books... which is located in the mtec1002-lab-03 directory.  Verify you're in the right directory using pwd.
 
 Write the command(s) (including going home) that you used to do this below:
 ----------
+I can't do that since I don't have any of those.
+
+Output:
+/c/Users/James
 
 
 
@@ -112,7 +167,7 @@ Write the command(s) (including going home) that you used to do this below:
 
 Write the command(s) that you used to do this - as well as its output - below:
 ----------
-
+Same as above.
 
 
 ==========
@@ -120,6 +175,8 @@ Write the command(s) that you used to do this - as well as its output - below:
 
 Write the command(s) that you used to do this below:
 ----------
+Same as above. I think the reason I can't do the last 3 questions(this question and the 2 before this) is because I don't have that file. I did it the way I was supposed to but it didn't work.
+
 
 ==========
 OPTIONAL
