@@ -37,13 +37,14 @@ $ ls
 Copy and paste the output below.
 ----------
 
-
+foo.txt
 
 ==========
 7. Create another new file using touch.
 
 $ touch bar.txt
 ----------
+bar.txt  foo.txt
 
 
 
@@ -52,6 +53,21 @@ $ touch bar.txt
 
 Copy and paste the output below.
 ----------
+$ls
+
+James@DESKTOP-07L4K8I MINGW64 ~/mtec1003-lab-03/my_files
+$ ls
+bar.txt  foo.txt
+
+James@DESKTOP-07L4K8I MINGW64 ~/mtec1003-lab-03/my_files
+
+
+or
+
+
+$ wc my_files
+wc: my_files: Is a directory
+      0       0       0 my_files
 
 
 
@@ -61,7 +77,9 @@ Copy and paste the output below.
 
 Write the command that you used to copy the file.  Additionally, copy and paste the output of your file listing below.
 ----------
-
+$cp bar.txt baz.txt
+$ls
+bar.txt  baz.txt  foo.txt
 
 
 ==========
@@ -69,13 +87,33 @@ Write the command that you used to copy the file.  Additionally, copy and paste 
 
 Write the command that you used to remove the file.  Copy and paste the output of your file listing below.
 ----------
+$rm bar.txt
+$ls
+
+James@DESKTOP-07L4K8I MINGW64 ~/mtec1003-lab-03/my_files
+$ rm bar.txt
+
+James@DESKTOP-07L4K8I MINGW64 ~/mtec1003-lab-03/my_files
+$ ls
+baz.txt  foo.txt
+
+
+
 ==========
 11. Move the file called foo.txt to qux.txt and then list the files again.
 
 
 Write the command that you used to move the file.  Copy and paste the output of your file listing below.
 ----------
+$mv foo.txt quz.txt
+$ls
 
+James@DESKTOP-07L4K8I MINGW64 ~/mtec1003-lab-03/my_files
+$ mv foo.txt quz.txt
+
+James@DESKTOP-07L4K8I MINGW64 ~/mtec1003-lab-03/my_files
+$ ls
+baz.txt  quz.txt
 
 
 ==========
@@ -90,7 +128,11 @@ Write the command that you used to move the file.  Copy and paste the output of 
 
 Write out the command that you used and what happened.
 ----------
+$rmdir my_files
 
+rmdir: failed to remove 'my_files': Directory not empty
+
+I think what happened is that $rmdir can't remove a directory that has files inside of it. It can only remove a directory if there are no files inside of it.
 
 
 ==========
@@ -98,7 +140,11 @@ Write out the command that you used and what happened.
 
 Write out the command that you used and what happened.
 ----------
+$rm my_files
 
+rm: cannot remove 'my_files': Is a directory
+
+I think what happened is that $rm can remove files inside a directory and not a directory itself so it can't remove the my_files directory.
 
 
 ==========
@@ -108,7 +154,7 @@ Force the removal of the directory and files using the -rf flag
 
 $ rm -rf my_files
 ----------
-
+It got rid of the directory.
 
 
 ==========
@@ -120,7 +166,7 @@ Use the command called cat on the file to show its contents.
 
 Describe what happened below.
 ----------
-
+I don't have anything like that since my file won't uncompress.
 
 
 ==========
@@ -132,7 +178,7 @@ Use the command, head, on the file to show the contents of the beginning of the 
 
 Write the command that you used below.  Write the last line of the output below (it should be the title).
 ----------
-
+I don't have anything like that since my file won't uncompress.
 
 
 ==========
@@ -144,7 +190,7 @@ Use tail on the file to show the contents of the end of the file.
 
 Write the command that you used below.  Write the last line of the output below (it should be the title).
 ----------
-
+I don't have anything like that since my file won't uncompress.
 
 
 ==========
@@ -156,7 +202,7 @@ Use less and more on the file to show the contents of the file.  Try pressing sp
 
 Write the command that you used below.  Describe what spacebar and q does after using either less or more.
 ----------
-
+I don't have anything like that since my file won't uncompress.
 
 
 ==========
@@ -164,15 +210,18 @@ Write the command that you used below.  Describe what spacebar and q does after 
 
 (Some characteristics that may help your description might be the length of the file, whether or not you'd like to read the whole thing... or just the beginning or end, etc.)
 ----------
-
+I'm not too sure when you would use less. Same for more.
+For cat, you could use that when you don't want to locate and open the files. You can just use cat (Filename) to see what are in your files in an instant. You could use this when doing a project and if you forget what's in that file, then that's when you would use it.
+For tail and head, you would use it when you want to find something that is closer(by alhpabetical order). For example, if I wanted to find a file that starts with D, I would use head since it would be closer than using tail.
 
 
 ==========
 21.  How many words are in pg1232.txt?  What command did you use to determine the word count?
 ----------
-
+Again, I don't have this file, but I would use $wc pg1232.txt
 
 
 ==========
 22.  How many lines are in pg1232.txt?  What command did you use to determine the line count?
 ----------
+Again, I don't have this file, but I would use $wc -l pg1232.txt. You can also use $wc pg1232.txt but to be more specific and find only word count, then I would use $wc -l pg1232.txt.
