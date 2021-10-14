@@ -14,7 +14,7 @@ Follow the instructions line-by-line.
 ==========
 2. Find out if mtec-1003-lab-03 already exists (from the previous lab).  If it doesn't, go back to the previous lab and find the steps regarding downloading the lab materials.
 
-(See steps 1-8 in https://github.com/entertainmenttechnology/Viera-MTEC1003-fall-2018/raw/gh-pages/mtec-1003-lab-03.tar.gz
+(See steps 1-8 in https://citytech.s3.amazonaws.com/mtec-1003-lab-03.tar.gz
 [NO OUTPUT]
 ----------
 ==========
