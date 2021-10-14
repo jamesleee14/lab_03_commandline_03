@@ -57,7 +57,7 @@ $ rm -rf mtec1003-lab-03
 ==========
 6.  A compressed archive (.tar.gz) of the lab files can be found at this url: 
 
-https://github.com/entertainmenttechnology/Viera-MTEC1003-fall-2018/raw/gh-pages/mtec-1003-lab-03.tar.gz
+https://citytech.s3.amazonaws.com/mtec-1003-lab-03.tar.gz
 
 Download this file to your home directory into a file called mtec-1003-lab-03.tar.gz.   Use a command that we learned to do this.
 
