@@ -17,15 +17,18 @@ We're going to be writing a shell script.  First, though... let's figure out wha
 
 What command did you use, and what was its output?
 ----------
+$date
 
-
+Thu, Oct 21, 2021  9:25:55 PM
 
 ==========
 2. Print out a calendar for this month.
 
 What command did you use, and what was its output?
 ----------
+I thought it was $cal but it didn't work. I tried doing $cal 2021 as well but this is what it gave me:
 
+bash: cal: command not found
 
 
 ==========
@@ -33,23 +36,37 @@ What command did you use, and what was its output?
 
 What commands did you use to do this?
 ----------
+$cd ~
+$pwd
 
-
+/c/Users/James
 
 ==========
 4. Create an empty file called copy_to_backup.sh.  Verify that the file exists.
 
 What commands did you use to do this?
 ----------
+$ touch copy_to_backup.sh
+$ls
 
-
+'3D Objects'/             Documents/           lab2.tar           mtec1003-lab-03/         ntuser.dat.LOG1                                                                                Recent@         stuff3.tar.gz
+ ansel/                   Downloads/           lab2.tar.gz        mtec-1003-lab-03/        ntuser.dat.LOG2                                                                               'Saved Games'/   stuff4/
+ AppData/                 eclipse-workspace/   lab2.txt.gz        mtec1003-lab-03.tar.gz   NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TM.blf                                        Searches/       Templates@
+'Application Data'@       Favorites/           lab2.txt.tar       mtec1003lab3             NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000001.regtrans-ms   SendTo@         Videos/
+ Contacts/                filename.txt         lab2p              mtec1003-lab3            NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000002.regtrans-ms  'Start Menu'@
+ Cookies@                 hello.txt            Links/             Music/                   ntuser.ini                                                                                     stuff/
+ copy_to_backup.sh        JamesMTEC1003/      'Local Settings'@  'My Documents'@           OneDrive/                                                                                      stuff.tar
+'Creative Cloud Files'/   lab2/                mtec1003-lab-02/   NetHood@                 Pictures/                                                                                      stuff2/
+ Desktop/                 lab2.gz              mtec1003-lab03     NTUSER.DAT               PrintHood@                                                                                     stuff3/
 
 ==========
 5. What are the permissions on your copy_to_backup.sh.
 
 What command did you use to find the permissions?
 ----------
+$ ls -l copy_to_backup.sh 
 
+-rw-r--r-- 1 James 197121 0 Oct 21 21:30 copy_to_backup.sh
 
 
 ==========
@@ -57,8 +74,14 @@ What command did you use to find the permissions?
 
 What commands did you use to do this?  What was the output?
 ----------
+$ chmod u+x copy_to_backup.sh 
 
+Output:
+James@DESKTOP-07L4K8I MINGW64 ~
+$ chmod u+x copy_to_backup.sh 
 
+James@DESKTOP-07L4K8I MINGW64 ~
+$
 
 ==========
 7. Try executing the file!
@@ -67,15 +90,20 @@ $ ./copy_to_backup.sh
 
 What command did you use to try to execute the file?  What happens?
 ----------
+I think its $ls -x  ./copy_to_backup.sh
 
+It gave me this output:
+./copy_to_backup.sh
 
+I also just typed $ ./copy_to_backup.sh and it just gave me this:
+./copy_to_backup.sh
 
 ==========
 8. Open the file with nano
 
 What command did you use to do this?
 ----------
-
+$nano cop[TAB][ENTER]
 
 
 ==========
@@ -87,18 +115,26 @@ c. print out "I'm done backing up"
 
 Write out the code in your file below...
 ----------
-
+CTRL+T
+mkdir -p ~/backup
+CTRL+T
+cp *.txt backup
 
 
 ==========
 10. Create a directory in your home called test
 ----------
+$mkdir test
+
+
 ==========
 11. Go into that directory and create two empty files... 1.txt and 2.txt
 
 What commands did you use to do this?
 ----------
-
+$cd test
+$touch 1.txt
+$touch 2.txt
 
 
 ==========
@@ -106,7 +142,7 @@ What commands did you use to do this?
 
 What commands did you use to do this?
 ----------
-
+$mv copy_to_backup.sh test
 
 
 ==========
@@ -114,7 +150,12 @@ What commands did you use to do this?
 
 What commands did you use to do this?
 ----------
+$ ./copy_to_backup.sh
+./copy_to_backup.sh: line 1: I'mt dont backing up: command not found
+./copy_to_backup.sh: line 2: I'm done backing up: command not found
+I'm dont backing up
 
+The last line was a typing error but it just stayed like that after I tried to fix it.
 
 
 ==========
@@ -122,3 +163,15 @@ What commands did you use to do this?
 
 What commands did you use to do this?  Show the output.
 ----------
+$cd ~
+$ls
+
+'3D Objects'/             Documents/           lab2.tar           mtec1003-lab-03/         ntuser.dat.LOG1                                                                                Recent@         stuff3.tar.gz
+ ansel/                   Downloads/           lab2.tar.gz        mtec-1003-lab-03/        ntuser.dat.LOG2                                                                               'Saved Games'/   stuff4/
+ AppData/                 eclipse-workspace/   lab2.txt.gz        mtec1003-lab-03.tar.gz   NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TM.blf                                        Searches/       Templates@
+'Application Data'@       Favorites/           lab2.txt.tar       mtec1003lab3             NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000001.regtrans-ms   SendTo@         test/
+ backup/                  filename.txt         lab2p              mtec1003-lab3            NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000002.regtrans-ms  'Start Menu'@    Videos/
+ Contacts/                hello.txt            Links/             Music/                   ntuser.ini                                                                                     stuff/
+ Cookies@                 JamesMTEC1003/      'Local Settings'@  'My Documents'@           OneDrive/                                                                                      stuff.tar
+'Creative Cloud Files'/   lab2/                mtec1003-lab-02/   NetHood@                 Pictures/                                                                                      stuff2/
+ Desktop/                 lab2.gz              mtec1003-lab03     NTUSER.DAT               PrintHood@                                                                                     stuff3/
